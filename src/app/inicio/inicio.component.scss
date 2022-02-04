@@ -1,0 +1,21 @@
+form{
+  border: red solid 3px;
+  padding: 2%;
+  margin-right: 30rem;
+  margin-left: 30rem;
+  background-color: antiquewhite;
+}
+.enviar{
+  background-color: green;
+}
+.eliminar{
+  background-color: red;
+}
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+h3{
+  margin-top: 0rem;
+}
