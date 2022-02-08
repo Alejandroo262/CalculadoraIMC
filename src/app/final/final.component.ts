@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InicioComponent} from "../inicio/inicio.component";
 
 @Component({
   selector: 'app-final',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinalComponent implements OnInit {
 
-  constructor() { }
+
+
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

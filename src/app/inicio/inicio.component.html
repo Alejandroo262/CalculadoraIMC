@@ -1,24 +1,35 @@
-<form action="/my-handling-form-page" method="post">
-  <h3>Calcule su índice de masa corporal</h3>
+ <h3>Calcule su índice de masa corporal</h3>
+  <form>
   <p>
-    Nombre: <input for="name" placeholder="Escriba su nombre">
+    Nombre: <input class="form-control"  for="name" placeholder="Escriba su nombre" [(ngModel)]="nombre" name="nombre">
   </p>
 
   <p>
-    <input type="radio" name="masculino" value="masculino">👨🏻
-    <input type="radio" name="femenino" value="femenino">👩🏼
+    <input type="radio" name="masculino" id="masculino" [(ngModel)]="masculino">👨🏻
+    <input type="radio" name="femenino" id="femenino" [(ngModel)]="femenino">👩🏼
   </p>
 
   <p>
-    Altura: <input for="name" placeholder="Escriba su altura en cm">
+    Altura:
+    <button type="button">+</button>
+    <input type="number" class="form-control" for="name" placeholder="Escriba su altura en cm" [(ngModel)]="altura" name="altura">
+    <button type="button">-</button>
   </p>
 
   <p>
-    Peso: <input for="name" placeholder="Escriba su peso en kg">
+    Peso:
+    <button type="button">+</button>
+    <input type="number" class="form-control" for="name" placeholder="Escriba su peso en kg" [(ngModel)]="peso" name="peso">
+    <button type="button">-</button>
   </p>
 
   <p class="botones">
-    <button class="enviar" type="submit">✔ Enviar</button>
+    <button (click)="enviar()" (click)="validar()" class="enviar" type="submit">✔ Enviar</button>
     <button class="eliminar" type="reset">✘ Eliminar</button>
   </p>
 </form>
+ <p>
+   Resultado:
+   <input type="number" id="resultado" name="resultado" [(ngModel)]="resultado">
+   <input type="text" id="resultadotexto" name="resultadotexto" [(ngModel)]="resultadotexto">
+ </p>

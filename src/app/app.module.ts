@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FinalComponent } from './final/final.component';
 
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { FinalComponent } from './final/final.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
