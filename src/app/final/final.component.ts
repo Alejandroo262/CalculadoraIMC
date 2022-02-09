@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {InicioComponent} from "../inicio/inicio.component";
 
 @Component({
@@ -7,6 +7,9 @@ import {InicioComponent} from "../inicio/inicio.component";
   styleUrls: ['./final.component.scss']
 })
 export class FinalComponent implements OnInit {
+  tittle: string='PEPE';
+
+
 
 
 

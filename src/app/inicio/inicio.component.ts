@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 
 
 
@@ -18,6 +18,8 @@ export class InicioComponent implements OnInit {
   public resultado: number=0;
   public resultadotexto: string='';
 
+  @Output() resultados=' pepe';
+
   constructor(
 
   ) { }
@@ -29,7 +31,7 @@ export class InicioComponent implements OnInit {
   }
 
   public enviar(){
-    this.resultado= (this.peso / (this.altura/100) * (this.altura/100));
+    this.resultado= (this.peso / (this.altura/100));
   }
 
   public validar(){
