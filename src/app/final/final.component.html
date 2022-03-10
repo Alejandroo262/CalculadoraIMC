@@ -2,10 +2,9 @@
 <form>
   <ul>
     <h1>Historial</h1>
-    <p>
+    <p *ngFor="let miHistorial of imprimirHistorial">
+     {{miHistorial}}
 
-      IMC: <input type="text"><br>
-      Resultado: <input type="text" >
 
     </p>
   </ul>

@@ -11,25 +11,30 @@
 
   <p>
     Altura:
-    <button type="button">+</button>
-    <input type="number" class="form-control" for="name" placeholder="Escriba su altura en cm" [(ngModel)]="altura" name="altura">
-    <button type="button">-</button>
+    <button (click)="botonmenosAltura()"type="button">-</button>
+
+    <input type="number" min="0" class="form-control" for="name" placeholder="Escriba su altura en cm" [(ngModel)]="altura" name="altura">
+
+    <button (click)="botonmasAltura()" type="button">+</button>
+
   </p>
 
   <p>
     Peso:
-    <button type="button">+</button>
-    <input type="number" class="form-control" for="name" placeholder="Escriba su peso en kg" [(ngModel)]="peso" name="peso">
-    <button type="button">-</button>
+    <button (click)="botonmenosPeso()" type="button">-</button>
+
+    <input type="number" min="0" class="form-control" for="name" placeholder="Escriba su peso en kg" [(ngModel)]="peso" name="peso">
+
+    <button (click)="botonmasPeso()"type="button">+</button>
   </p>
 
   <p class="botones">
-    <button (click)="enviar()" (click)="validar()" class="enviar" type="submit">✔ Enviar</button>
+    <button (click)="enviar()" (click)="validar()" (click)="ejecutarhistorial()" class="enviar" type="submit">✔ Enviar</button>
     <button class="eliminar" type="reset">✘ Eliminar</button>
   </p>
 </form>
  <p>
    Resultado:
-   <input type="number" id="resultado" name="resultado" [(ngModel)]="resultado">
+   <input type="text" id="resultado" name="resultado" [(ngModel)]="resultado">
    <input type="text" id="resultadotexto" name="resultadotexto" [(ngModel)]="resultadotexto">
  </p>

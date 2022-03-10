@@ -7,8 +7,9 @@ import {InicioComponent} from "../inicio/inicio.component";
   styleUrls: ['./final.component.scss']
 })
 export class FinalComponent implements OnInit {
-  tittle: string='PEPE';
 
+
+@Input() imprimirHistorial: string[]=[];
 
 
 

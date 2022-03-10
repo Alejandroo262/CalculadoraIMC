@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 
 
@@ -17,22 +17,34 @@ export class InicioComponent implements OnInit {
   public peso: number=0;
   public resultado: number=0;
   public resultadotexto: string='';
+  public resultadoHistorial: string[]=[];
 
-  @Output() resultados=' pepe';
+
+  @Output() miHistorial= new EventEmitter<string>();
+
+
 
   constructor(
 
   ) { }
 
 
-
   ngOnInit(): void {
 
+  }
+
+  ejecutarhistorial() {
+    this.resultadoHistorial.push("Nombre: "+this.nombre);
+    this.resultadoHistorial.push("Estado: "+this.resultadotexto);
+    // @ts-ignore
+    this.miHistorial.emit(this.resultadoHistorial)
   }
 
   public enviar(){
     this.resultado= (this.peso / (this.altura/100));
   }
+
+
 
   public validar(){
     if (this.resultado>=30){
@@ -47,4 +59,28 @@ export class InicioComponent implements OnInit {
       this.resultadotexto= 'Peso no válido'
     }
   }
+
+  public botonmasAltura(){
+    this.altura=this.altura+1;
+  }
+
+  public botonmenosAltura(){
+    if (this.altura<=0){
+    } else {
+      this.altura = this.altura - 1;
+    }
+  }
+
+  public botonmasPeso(){
+    this.peso= this.peso+1;
+  }
+
+  public botonmenosPeso(){
+    if (this.peso<=0){
+    } else {
+      this.peso = this.peso - 1;
+    }
+  }
+
+
 }
